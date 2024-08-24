@@ -62,9 +62,9 @@ public class BookingController {
     }
 
 
-    @DeleteMapping("/bookings/{id}")
-    public ResponseEntity<Void> deleteBooking(@PathVariable Integer id) {
-        boolean isDeleted = this.bookingService.deleteBooking(id);
+        @DeleteMapping("/bookings/{id}")
+        public ResponseEntity<Void> deleteBooking(@PathVariable Integer id) {
+            boolean isDeleted = this.bookingService.deleteBooking(id);
         if (!isDeleted) {
             logger.error("Failed to delete booking with ID: " + id);
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

@@ -21,7 +21,16 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idBooking;
     private String hotel_name;
-    private String booking_status;
+
+    public String getBook_status() {
+        return book_status;
+    }
+
+    public void setBook_status(String book_status) {
+        this.book_status = book_status;
+    }
+
+    private String book_status;
     private String hotel_address;
     private String hotel_picture;
     private double price;
@@ -43,14 +52,6 @@ public class Booking {
 
     public void setHotel_name(String hotel_name) {
         this.hotel_name = hotel_name;
-    }
-
-    public String getBooking_status() {
-        return booking_status;
-    }
-
-    public void setBooking_status(String booking_status) {
-        this.booking_status = booking_status;
     }
 
     public String getHotel_address() {
