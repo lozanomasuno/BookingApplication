@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'home',
       component: HotelRoom
     },
+    {
+      path: '/BookedRooms',
+      name: 'booked',
+      component: () => import(/* webpackChunkName: "Bookedrooms" */ '@/views/BookedRooms.vue')
+    },
     
   ]
 })
